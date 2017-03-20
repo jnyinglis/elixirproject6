@@ -34,13 +34,8 @@ defmodule XML do
 
     @doc """
     """
-    @spec select(any(), String.t) :: any()
-    def select(doc, path) when is_binary(path) == true do
-        xpath(doc, to_charlist(path))
-    end
-
-    @spec select(any(), charlist()) :: any()
-    def select(doc, path) when is_list(path) == true do
+    @spec select(any(), [String.t | charlist()) :: any()
+    def select(doc, path) do
         xpath(doc, path)
     end
 
