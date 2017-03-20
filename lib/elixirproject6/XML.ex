@@ -34,7 +34,7 @@ defmodule XML do
 
     @doc """
     """
-    @spec select(any(), [String.t | charlist()) :: any()
+    @spec select(any(), [String.t | charlist()]) :: any()
     def select(doc, path) do
         xpath(doc, path)
     end
